@@ -16,7 +16,7 @@ job_titles = soup.find_all('a', {'class': 'jobtitle turnstileLink'})
 for job in job_titles:
     print(job.text)
 
-#saves the output to text file
+#saves the output to text file in current directory
 
 with open('job_titles.txt', 'w') as file:
     file.writelines(job.text + '\n' for job in job_titles)
